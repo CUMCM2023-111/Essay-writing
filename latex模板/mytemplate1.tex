@@ -1,0 +1,206 @@
+% 使用xelatex编译
+
+\documentclass[withoutpreface,bwprint]{cumcmthesis} %去掉封面与编号页，电子版提交的时候使用。
+
+% 导入宏包
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{url}   % 支持网页链接
+\usepackage{subcaption} % 支持子标题
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{geometry}
+    \geometry{a4paper,centering,scale=0.75}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{url}   % 支持网页链接
+\usepackage{subcaption} % 支持子标题
+\usepackage{amsmath}
+\usepackage{float}
+
+
+\title{模板（此处改为论文标题）}
+\tihao{A} % 选题
+\baominghao{5124} % 报名号
+\schoolname{上海交通大学} % 大学
+\membera{ }
+\memberb{ }
+\memberc{ }
+\supervisor{ }
+\yearinput{2023} % 日期：年
+\monthinput{xx} % 日期：月
+\dayinput{xx} % 日期：日
+
+\begin{document}
+
+\maketitle %标题页
+
+\begin{abstract} % 摘要环境
+    本文解决的问题，建立的模型和求解结果
+
+    \textbf{对于问题一：} aa
+
+    \textbf{对于问题二：} bbb
+
+    \textbf{对于问题三：} bbb
+
+\keywords{aaa\quad  bbb\quad   ccc\quad  ddd} % 关键词
+\end{abstract}
+
+\section{问题重述}
+\subsection{问题背景}
+
+穿越沙漠的游戏规则
+
+\subsection{问题重述}
+
+\quad \textbf{问题一：}
+
+\quad \textbf{问题二：}
+
+\quad \textbf{问题三：}
+
+\section{问题分析}
+\subsection{问题一}
+
+\subsection{问题二}
+
+\subsection{问题三}
+
+\section{模型假设}
+在这里写一些为了求解做的一般性优化
+
+\section{符号说明及名词定义}
+\begin{table}[!htbp]
+
+    \centering
+    \begin{tabular}{ccccc}
+        \toprule[1.5pt]
+        符号 & 符号描述 & 单位 \\
+        \midrule[1pt]
+        B & 负重上限 & kg \\
+        T & 穿越沙漠总时间 & 天 \\
+        S & 基础收益 & 元 \\
+        \bottomrule[1.5pt]
+    \end{tabular}
+\end{table}
+
+\section{模型准备}
+
+
+\section{问题一：基于……的模型}
+
+\section{问题二：基于……的模型}
+
+\section{问题三：基于……的模型}
+
+
+\section{模型评价与分析}
+
+\newpage
+%参考文献
+\begin{thebibliography}{9}%宽度9
+    \bibitem[1]{liuhaiyang2013latex}
+    刘海洋.
+    \newblock \LaTeX {}入门\allowbreak[J].
+    \newblock 电子工业出版社, 北京, 2013.
+    \bibitem[2]{mathematical-modeling}
+    全国大学生数学建模竞赛论文格式规范 (2020 年 8 月 25 日修改).
+    \bibitem{3} \url{https://www.latexstudio.net}
+\end{thebibliography}
+
+\newpage
+%附录
+\begin{appendices}
+
+    \section{模板所用的宏包}
+    \begin{table}[htbp]
+        \centering
+        \caption{宏包罗列}
+        \begin{tabular}{ccccc}
+            \toprule
+            \multicolumn{5}{c}{模板中已经加载的宏包} \\
+            \midrule
+            amsbsy & amsfonts & {amsgen} & {amsmath} & {amsopn} \\
+            amssymb & amstext & {appendix} & {array} & {atbegshi} \\
+            atveryend & auxhook & {bigdelim} & {bigintcalc} & {bigstrut} \\
+            bitset & bm    & {booktabs} & {calc} & {caption} \\
+            caption3 & CJKfntef & {cprotect} & {ctex} & {ctexhook} \\
+            ctexpatch & enumitem & {etexcmds} & {etoolbox} & {everysel} \\
+            expl3 & fix-cm & {fontenc} & {fontspec} & {fontspec-xetex} \\
+            geometry & gettitlestring & {graphics} & {graphicx} & {hobsub} \\
+            hobsub-generic & hobsub-hyperref & {hopatch} & {hxetex} & {hycolor} \\
+            hyperref & ifluatex & {ifpdf} & {ifthen} & {ifvtex} \\
+            ifxetex & indentfirst & {infwarerr} & {intcalc} & {keyval} \\
+            kvdefinekeys & kvoptions & {kvsetkeys} & {l3keys2e} & {letltxmacro} \\
+            listings & longtable & {lstmisc} & {ltcaption} & {ltxcmds} \\
+            multirow & nameref & {pdfescape} & {pdftexcmds} & {refcount} \\
+            rerunfilecheck & stringenc & {suffix} & {titletoc} & {tocloft} \\
+            trig  & ulem  & {uniquecounter} & {url} & {xcolor} \\
+            xcolor-patch & xeCJK & {xeCJKfntef} & {xeCJK-listings} & {xparse} \\
+            xtemplate & zhnumber &       &       &  \\
+            \bottomrule
+        \end{tabular}%
+        \label{tab:addlabel}%
+    \end{table}%
+    
+    以上宏包都已经加载过了，不要重复加载它们。
+    
+    \section{排队算法--matlab 源程序}
+    
+    \begin{lstlisting}[language=matlab]
+    kk=2;[mdd,ndd]=size(dd);
+    while ~isempty(V)
+    [tmpd,j]=min(W(i,V));tmpj=V(j);
+    for k=2:ndd
+    [tmp1,jj]=min(dd(1,k)+W(dd(2,k),V));
+    tmp2=V(jj);tt(k-1,:)=[tmp1,tmp2,jj];
+    end
+    tmp=[tmpd,tmpj,j;tt];[tmp3,tmp4]=min(tmp(:,1));
+    if tmp3==tmpd, ss(1:2,kk)=[i;tmp(tmp4,2)];
+    else,tmp5=find(ss(:,tmp4)~=0);tmp6=length(tmp5);
+    if dd(2,tmp4)==ss(tmp6,tmp4)
+    ss(1:tmp6+1,kk)=[ss(tmp5,tmp4);tmp(tmp4,2)];
+    else, ss(1:3,kk)=[i;dd(2,tmp4);tmp(tmp4,2)];
+    end;end
+    dd=[dd,[tmp3;tmp(tmp4,2)]];V(tmp(tmp4,3))=[];
+    [mdd,ndd]=size(dd);kk=kk+1;
+    end; S=ss; D=dd(1,:);
+     \end{lstlisting}
+    
+     \section{规划解决程序--lingo源代码}
+    
+    \begin{lstlisting}[language=c]
+    kk=2;
+    [mdd,ndd]=size(dd);
+    while ~isempty(V)
+        [tmpd,j]=min(W(i,V));tmpj=V(j);
+    for k=2:ndd
+        [tmp1,jj]=min(dd(1,k)+W(dd(2,k),V));
+        tmp2=V(jj);tt(k-1,:)=[tmp1,tmp2,jj];
+    end
+        tmp=[tmpd,tmpj,j;tt];[tmp3,tmp4]=min(tmp(:,1));
+    if tmp3==tmpd, ss(1:2,kk)=[i;tmp(tmp4,2)];
+    else,tmp5=find(ss(:,tmp4)~=0);tmp6=length(tmp5);
+    if dd(2,tmp4)==ss(tmp6,tmp4)
+        ss(1:tmp6+1,kk)=[ss(tmp5,tmp4);tmp(tmp4,2)];
+    else, ss(1:3,kk)=[i;dd(2,tmp4);tmp(tmp4,2)];
+    end;
+    end
+        dd=[dd,[tmp3;tmp(tmp4,2)]];V(tmp(tmp4,3))=[];
+        [mdd,ndd]=size(dd);
+        kk=kk+1;
+    end;
+    S=ss;
+    D=dd(1,:);
+     \end{lstlisting}
+    \end{appendices}
+    
+    
+ 
+ \end{document}
+
+
+
